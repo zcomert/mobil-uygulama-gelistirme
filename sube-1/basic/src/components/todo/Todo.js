@@ -1,20 +1,39 @@
-import { View, Text, StyleSheet, TextInput, Button } from "react-native";
+import { View, Text, StyleSheet, TextInput, Button, Pressable, FlatList } from "react-native";
 import React, { useState } from "react";
 import Colors from "./colors";
+import { ScrollView } from "react-native-web";
 
 const Todo = () => {
-  
   const [todoInput, setTodoInput] = useState("Örnek");
-  const [todos, setTotos] = useState([]);
+  
+  // yapılacak
+  const [todos, setTodos] = useState([]);
+  
+  // yapılanlar
+  const [todosDone, setTodosDone] = useState([]);
+
+  const handleLongPress = (item) => {
+    // yapılanlar listesine eklemeyi yap.
+    setTodosDone([...todosDone, item])
+
+    // yapılacaklar listesinden kaldırma işlemi
+    setTodos(todos.filter(i=> i!==item))
+  }
 
   const handlePress = () => {
-    setTotos([...todos, todoInput])
-  }
+    setTodos([...todos, todoInput]);
+  };
 
   const handleOnInputTextChange = (text) => {
-    setTodoInput(text)
+    setTodoInput(text);
+  };
+
+  const renderItem = ({item})=>{
+    return(<View style={styles.todoDoneItem}>
+      <Text>{item}</Text>
+    </View>)
   }
-  
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -23,30 +42,33 @@ const Todo = () => {
         </View>
         <View style={styles.formControl}>
           <View style={{ flex: 0.8 }}>
-            <TextInput 
-            value={todoInput}
-            onChangeText={handleOnInputTextChange}
-            style={styles.inputText} />
+            <TextInput
+              value={todoInput}
+              onChangeText={handleOnInputTextChange}
+              style={styles.inputText}
+            />
           </View>
           <View style={{ flex: 0.2 }}>
-            <Button 
-                title="Ekle"
-                onPress={handlePress}
-            />
+            <Button title="Ekle" onPress={handlePress} />
           </View>
         </View>
       </View>
       <View style={styles.todoContainer}>
-            
-            {todos.map((item) => (
-            <View>
-            <Text>{item}</Text>
-            </View>)
-            )}
-
+        <ScrollView>
+          {todos.map((item,index) => (
+            <Pressable key={index} onLongPress={() => handleLongPress(item)} >
+              <View style={styles.todoItem} >
+                <Text>{item}</Text>
+              </View>
+            </Pressable>
+          ))}
+        </ScrollView>
       </View>
       <View style={styles.doneContainer}>
-        <Text>Done list</Text>
+        <FlatList
+          data={todosDone}
+          renderItem={renderItem}
+        />
       </View>
     </View>
   );
@@ -89,6 +111,20 @@ const styles = StyleSheet.create({
     flex: 0.4,
     backgroundColor: Colors.green200,
   },
+  todoDoneItem:{
+    margin:8,
+    padding:8,
+    borderWidth:Colors.primary500,
+    backgroundColor:Colors.white,
+    fontSize:24
+  },
+  todoItem:{
+    margin:8,
+    padding:8,
+    borderWidth:Colors.primary500,
+    backgroundColor:Colors.white,
+    fontSize:24
+  }
 });
 
 export default Todo;
