@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import Colors from "./colors";
 import BookAdd from "./BookAdd";
 import BookList from "./BookList";
+import BookRead from "./BookRead";
 
 const BookSeries = () => {
   const [book, setBook] = useState("Örnek kitap");
@@ -61,9 +62,10 @@ const BookSeries = () => {
 
       <BookList books={books} bookRender={bookRender} />
 
-      <View style={styles.readContainer}>
-        <FlatList data={finishedBooks} renderItem={renderFinishedItem} />
-      </View>
+      <BookRead 
+        renderFinishedItem={renderFinishedItem}
+        finishedBooks={finishedBooks} />
+      
     </View>
   );
 };
@@ -89,10 +91,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.secondary500,
     borderWidth: 1,
   },
-  readContainer: {
-    flex: 0.4,
-    backgroundColor: Colors.primary500,
-  },
+  
 });
 
 export default BookSeries;
