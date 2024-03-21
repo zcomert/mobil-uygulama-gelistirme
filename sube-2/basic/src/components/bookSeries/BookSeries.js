@@ -11,6 +11,7 @@ import {
 import React, { useState } from "react";
 import Colors from "./colors";
 import BookAdd from "./BookAdd";
+import BookList from "./BookList";
 
 const BookSeries = () => {
   const [book, setBook] = useState("Örnek kitap");
@@ -34,12 +35,18 @@ const BookSeries = () => {
     setFinishedBooks(finishedBooks.filter((i) => i !== item));
   };
 
+  const bookRender = ({ item }) => (
+    <View style={styles.book}>
+      <Pressable onLongPress={() => handleLongPress(item)}>
+        <Text>{item}</Text>
+      </Pressable>
+    </View>
+  );
+
   const renderFinishedItem = ({ item }) => (
     <View style={styles.finishedbook}>
       <Pressable onLongPress={() => handleRemove(item)}>
-        <Text>
-          {item}
-        </Text>
+        <Text>{item}</Text>
       </Pressable>
     </View>
   );
@@ -51,23 +58,9 @@ const BookSeries = () => {
         handlePress={handlePress}
         handleOnTextChange={handleOnTextChange}
       />
-      
 
-      <View style={styles.booksContainer}>
-        <ScrollView>
-          {books.map((item, index) => {
-            return (
-              <View style={styles.book} key={index}>
-                <Pressable onLongPress={() => handleLongPress(item)}>
-                  <Text>
-                    {index} {item}
-                  </Text>
-                </Pressable>
-              </View>
-            );
-          })}
-        </ScrollView>
-      </View>
+      <BookList books={books} bookRender={bookRender} />
+
       <View style={styles.readContainer}>
         <FlatList data={finishedBooks} renderItem={renderFinishedItem} />
       </View>
@@ -79,12 +72,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  
-  booksContainer: {
-    flex: 0.4,
-    backgroundColor: Colors.secondary500,
-  },
 
+  
   book: {
     margin: 15,
     padding: 15,
@@ -92,6 +81,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary500,
     borderWidth: 1,
   },
+
   finishedbook: {
     margin: 15,
     padding: 15,
