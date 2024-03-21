@@ -21,6 +21,10 @@ const BookSeries = () => {
     setBook(text);
   }
 
+  const handleRemove = (item) => {
+    setFinishedBooks(finishedBooks.filter(i => i!==item))
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -60,7 +64,7 @@ const BookSeries = () => {
         {finishedBooks.map((item,index) => {
           return(
             <View style={styles.finishedbook} key={index}>
-              <Pressable onLongPress={() => handleLongPress(item)} >
+              <Pressable onLongPress={() => handleRemove(item)} >
               <Text>{index} {item}</Text>
               </Pressable>
             </View>
