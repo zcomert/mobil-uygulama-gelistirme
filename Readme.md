@@ -45,3 +45,10 @@
 - spread operator
 - TextInput
 - Button
+
+## Hafta 05
+- FlastList
+- data
+- renderItem
+- Components
+- Component Drilling
