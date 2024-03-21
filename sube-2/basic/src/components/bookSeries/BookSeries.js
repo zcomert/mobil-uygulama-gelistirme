@@ -34,6 +34,10 @@ const BookSeries = () => {
     setFinishedBooks(finishedBooks.filter(i => i!==item))
   }
 
+  const renderFinishedItem = () => {
+    return(<Text>Hi from function.</Text>)
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
