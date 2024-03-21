@@ -1,24 +1,33 @@
-import { View, Text, StyleSheet, TextInput, Button, Pressable, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Button,
+  Pressable,
+  FlatList,
+  Alert,
+} from "react-native";
 import React, { useState } from "react";
 import Colors from "./colors";
 import { ScrollView } from "react-native-web";
 
 const Todo = () => {
   const [todoInput, setTodoInput] = useState("Örnek");
-  
+
   // yapılacak
   const [todos, setTodos] = useState([]);
-  
+
   // yapılanlar
   const [todosDone, setTodosDone] = useState([]);
 
   const handleLongPress = (item) => {
     // yapılanlar listesine eklemeyi yap.
-    setTodosDone([...todosDone, item])
+    setTodosDone([...todosDone, item]);
 
     // yapılacaklar listesinden kaldırma işlemi
-    setTodos(todos.filter(i=> i!==item))
-  }
+    setTodos(todos.filter((i) => i !== item));
+  };
 
   const handlePress = () => {
     setTodos([...todos, todoInput]);
@@ -28,21 +37,29 @@ const Todo = () => {
     setTodoInput(text);
   };
 
-  const renderItem = ({item})=>{
-    return(<View style={styles.todoDoneItem}>
-      <Text>{item}</Text>
-    </View>)
+  const handleRemove = (item) => {
+    Alert.alert(item)
   }
 
-  const renderTodos = ({item}) => {
-    return(
-      <Pressable key={index} onLongPress={() => handleLongPress(item)} >
-      <View style={styles.todoItem} >
-        <Text>{item}</Text>
-      </View>
-    </Pressable>
-    )
-  }
+  const renderItem = ({ item }) => {
+    return (
+      <Pressable onLongPress={() => handleRemove(item)}>
+        <View style={styles.todoDoneItem}>
+          <Text>{item}</Text>
+        </View>
+      </Pressable>
+    );
+  };
+
+  const renderTodos = ({ item }) => {
+    return (
+      <Pressable onLongPress={() => handleLongPress(item)}>
+        <View style={styles.todoItem}>
+          <Text>{item}</Text>
+        </View>
+      </Pressable>
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -64,16 +81,10 @@ const Todo = () => {
         </View>
       </View>
       <View style={styles.todoContainer}>
-        <FlatList
-          data={todos}
-          renderItem={renderTodos}
-        />
+        <FlatList data={todos} renderItem={renderTodos} />
       </View>
       <View style={styles.doneContainer}>
-        <FlatList
-          data={todosDone}
-          renderItem={renderItem}
-        />
+        <FlatList data={todosDone} renderItem={renderItem} />
       </View>
     </View>
   );
@@ -116,20 +127,20 @@ const styles = StyleSheet.create({
     flex: 0.4,
     backgroundColor: Colors.green200,
   },
-  todoDoneItem:{
-    margin:8,
-    padding:8,
-    borderWidth:Colors.primary500,
-    backgroundColor:Colors.white,
-    fontSize:24
+  todoDoneItem: {
+    margin: 8,
+    padding: 8,
+    borderWidth: Colors.primary500,
+    backgroundColor: Colors.white,
+    fontSize: 24,
   },
-  todoItem:{
-    margin:8,
-    padding:8,
-    borderWidth:Colors.primary500,
-    backgroundColor:Colors.white,
-    fontSize:24
-  }
+  todoItem: {
+    margin: 8,
+    padding: 8,
+    borderWidth: Colors.primary500,
+    backgroundColor: Colors.white,
+    fontSize: 24,
+  },
 });
 
 export default Todo;
