@@ -34,6 +34,16 @@ const Todo = () => {
     </View>)
   }
 
+  const renderTodos = ({item}) => {
+    return(
+      <Pressable key={index} onLongPress={() => handleLongPress(item)} >
+      <View style={styles.todoItem} >
+        <Text>{item}</Text>
+      </View>
+    </Pressable>
+    )
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -54,15 +64,10 @@ const Todo = () => {
         </View>
       </View>
       <View style={styles.todoContainer}>
-        <ScrollView>
-          {todos.map((item,index) => (
-            <Pressable key={index} onLongPress={() => handleLongPress(item)} >
-              <View style={styles.todoItem} >
-                <Text>{item}</Text>
-              </View>
-            </Pressable>
-          ))}
-        </ScrollView>
+        <FlatList
+          data={todos}
+          renderItem={renderTodos}
+        />
       </View>
       <View style={styles.doneContainer}>
         <FlatList
