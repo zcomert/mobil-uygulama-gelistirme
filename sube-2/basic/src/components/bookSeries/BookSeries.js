@@ -1,6 +1,15 @@
-import { View, Text, StyleSheet, ScrollView, Button, TextInput, Pressable } from "react-native";
+import { View, 
+  Text, 
+  StyleSheet, 
+  ScrollView, 
+  Button, 
+  TextInput, 
+  Pressable, 
+  FlatList } 
+  from "react-native";
 import React, { useState } from "react";
 import Colors from "./colors";
+
 
 const BookSeries = () => {
 
@@ -60,17 +69,10 @@ const BookSeries = () => {
         </ScrollView>
       </View>
       <View style={styles.readContainer}>
-      <ScrollView>
-        {finishedBooks.map((item,index) => {
-          return(
-            <View style={styles.finishedbook} key={index}>
-              <Pressable onLongPress={() => handleRemove(item)} >
-              <Text>{index} {item}</Text>
-              </Pressable>
-            </View>
-          )
-        })}
-        </ScrollView>
+          <FlatList 
+            data={finishedBooks}
+            renderItem={renderFinishedItem}
+          />
       </View>
     </View>
   );
