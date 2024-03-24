@@ -1,1 +1,31 @@
-<mxfile host="Electron" modified="2024-03-21T12:28:53.482Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.7.4 Chrome/106.0.5249.199 Electron/21.3.3 Safari/537.36" version="20.7.4" etag="OOWAcO6NRYcSQRVO1wHg" type="device"><diagram id="jFvQl0J82i4U4mJN3piv" name="BookSeries">1ZfBctowEIafxsdmLBsMORaStJ1JmzRk0jY32VrbIsJiZGFMn75rSwY7JrSdIaW5gPaXVpL/b5k1jj9dlB8UXaafJQPheC4rHf/C8bwRGeBnJWyMMCBjIySKMyORnTDjP8GKrlVXnEHeWailFJovu2Ikswwi3dGoUnLdXRZL0T11SRPoCbOIir76jTOdGnXsjXb6R+BJ2pxMgnMzs6DNYvskeUqZXLck/9Lxp0pKbUaLcgqi8q7xxeRdvTC7vZiCTP9JwvohHN0Xc/cxfBy5cyiLLzdf3/lml4KKlX3glGZMwE12D6WeYoD2eFPHCwQeMgkVjpJq1CiMF41kMm8V5PnBFLxiK2vPRqGUTy8trp3UmwaPkquMQfWELk5LpVOZyIyKaymXKBIU56D1xhYWXWlZ3VQvhJ1F89Tmezv4YTerg4uyE21sZO4BrFc7OxhWyuVKRXCAQFPUVCWgD6zztiWDPzWQC8D7YJ4CQTUvuvegtuiT7bpdXeDAlsZflMmwVyYVo7zPuJLvAJGoHqrKrZkNM5nh1+R49Nyz4X/Ob3BKfqMeP1VDuuIZz1NgnzQsEKHj+aSyJ7byxED+tyDJ+biD8oy45Dc46+gWFEe3sPJOxjg4JWPSY1zhm6ErsIehENhBK3TrlGuYLWltwBp7eBcMzZemrca8rABjbQgxlUKqeiOfURjHEeq5VvIJWjNBNIYw3oIoQGkoD6PoW2cT/IFtovYtgjTxutWTrZS22nGjHd1sb6/Z7xl7PafjOPaivU6zIAyGwXGcJkHXad87sdODvU5f81y/dav94TOrgxNbHey1+g7om6/q4XOryatZjeHunb6ea/0x8i9/AQ==</diagram></mxfile>
+<mxfile host="Electron" modified="2024-03-24T19:18:55.183Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="LAuh5DAo6R5PXBCldl-P" version="21.2.8" type="device">
+  <diagram id="jFvQl0J82i4U4mJN3piv" name="BookSeries">
+    <mxGraphModel dx="683" dy="421" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wVb7Tvj0ZbZ70jexvNOQ-3" value="handleOnTextChange,&lt;br&gt;&lt;div&gt;handlePress,&lt;br&gt;&lt;/div&gt;&lt;div&gt;book&lt;/div&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="wVb7Tvj0ZbZ70jexvNOQ-1" target="wVb7Tvj0ZbZ70jexvNOQ-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wVb7Tvj0ZbZ70jexvNOQ-5" value="books&lt;br&gt;bookRender" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="wVb7Tvj0ZbZ70jexvNOQ-1" target="wVb7Tvj0ZbZ70jexvNOQ-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wVb7Tvj0ZbZ70jexvNOQ-7" value="renderFinishedItem&#xa;finishedBooks" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.198;entryY=0.101;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="wVb7Tvj0ZbZ70jexvNOQ-1" target="wVb7Tvj0ZbZ70jexvNOQ-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wVb7Tvj0ZbZ70jexvNOQ-1" value="BookSeries" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="340" y="140" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wVb7Tvj0ZbZ70jexvNOQ-2" value="BookAdd" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="160" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wVb7Tvj0ZbZ70jexvNOQ-4" value="BookList" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="350" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wVb7Tvj0ZbZ70jexvNOQ-6" value="BookRead" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="550" y="310" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
