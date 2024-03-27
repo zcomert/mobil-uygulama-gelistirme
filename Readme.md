@@ -47,8 +47,14 @@
 - Button
 
 ## Hafta 05
-- FlastList
+- FlatList
 - data
 - renderItem
 - Components
 - Component Drilling
+
+## Hafta 06
+- FlatList
+- FlatList Horizontal Mode
+- FlatList Multiple Column Support
+- @expo-vector-icons
