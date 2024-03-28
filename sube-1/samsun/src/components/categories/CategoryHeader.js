@@ -9,7 +9,7 @@ const CategoryHeader = ({ name }) => {
         <Text style={styles.text}>{name}</Text>
       </View>
       <View style={styles.categoryIcon}>
-        <FontAwesome name="list" size={24} color="black" />
+        <FontAwesome name="list" size={18} color="black" />
       </View>
     </View>
   );
@@ -18,7 +18,9 @@ const CategoryHeader = ({ name }) => {
 const styles = StyleSheet.create({
   categoryHeaderContainer: {
     flexDirection:'row',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    alignItems:'center',
+    paddingHorizontal:16
   },
   categoryText:{
 
