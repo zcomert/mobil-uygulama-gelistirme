@@ -1,15 +1,17 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
 import React from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Colors from "../../constants/colors";
 
-const CategoryIcon = ({ name, icon }) => {
+const windowWidth = Dimensions.get('window').width;
+const iconSize = windowWidth / 8; // İkon boyutu burada ayarlanıyor, istediğiniz değeri verebilirsiniz.
+
+const CategoryIcon = ({ name, icon }) =>
+{
   return (
-    <View style={styles.outContainer}>
-      <View style={styles.contanier}>
-        <View style={styles.icon}>
-          <FontAwesome5 name={icon} size={24} color={Colors.white} />
-        </View>
+    <View style={styles.container}>
+      <View style={styles.icon}>
+        <FontAwesome5 name={icon} size={iconSize} color={Colors.white} />
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{name}</Text>
@@ -17,27 +19,31 @@ const CategoryIcon = ({ name, icon }) => {
     </View>
   );
 };
+
 const styles = StyleSheet.create({
-  outContainer: {
-    justifyContent: "flex-start",
-    alignItems:'center',
-    // borderWidth:1,
-    width:75,
-    marginHorizontal:5,
-  },
-  contanier: {
-    padding: 5,
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
     margin: 5,
-    backgroundColor: Colors.primary500,
-    borderRadius:100
+    width: windowWidth / 3 - 10, // İkonlar arasındaki boşluğu ayarlayabilirsiniz.
+    aspectRatio: 1, // Kare şeklindeki kutuları sağlar
   },
-  icon: {},
+  icon: {
+    backgroundColor: Colors.primary500,
+    borderRadius: iconSize / 2, // Kare içindeki yuvarlaklık
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: iconSize + 20,
+    height: iconSize + 20,
+    marginBottom: 5, // İkon altındaki boşluğu ayarlar
+  },
   textContainer: {
-    flexWrap:'wrap'
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
-    fontSize: 8,
-  },
+    fontSize: 16,
+  }
 });
 
 export default CategoryIcon;
