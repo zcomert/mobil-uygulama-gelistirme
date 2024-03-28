@@ -7,9 +7,9 @@ const CategoryIcon = ({ icon, name }) => {
   return (
     <View style={styles.container}>
       <View style={styles.item}>
-        <FontAwesome5 name={icon} size={24} color={Colors.white} />
+        <FontAwesome5 name={icon} size={18} color={Colors.white} />
       </View>
-        <Text>{name}</Text>
+      <Text style={styles.text}>{name}</Text>
     </View>
   );
 };
@@ -17,14 +17,20 @@ const CategoryIcon = ({ icon, name }) => {
 const styles = StyleSheet.create({
   container: {
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    width:75,
+    height:75,
   },
   item: {
+        flexWrap:'wrap',
         backgroundColor:Colors.primary500,
-        margin:8,
         padding:8,
         borderRadius:100, 
   },
+  text:{
+    fontSize:8,
+    textAlign:'center'
+  }
 });
 
 export default CategoryIcon;
