@@ -1,5 +1,6 @@
 const speakersdata = [
     {
+        id: 1,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/cengiz-peklevan.jpg?v=6',
         title: "Doğal ve Yapay Zekanın Uygulamalı Matematiği",
         name: "Dr. Cengiz PEHLEVAN",
@@ -8,6 +9,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 2,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/eren-gunhan-ulusoy.jpg?v=6',
         title: "Doğal ve Yapay Zekanın Uygulamalı Matematiği",
         name: "Dr. Eren Günhan ULUSOY",
@@ -16,6 +18,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 3,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/adnan-celik.jpg?v=6',
         title: "Türkiye Yüzyılında Savunma ve Uzay",
         name: "Adnan ÇELİK",
@@ -24,6 +27,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 4,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ilkay-sengul.jpg?v=6',
         title: "Sektör Kampüste Programı Uygulamasının Tanıtımı",
         name: "İlkay ŞENGÜL",
@@ -32,6 +36,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 5,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/jenny-m-divleli.jpg?v=6',
         title: "Çocuk Edebiyatının Önemi ve Etisi",
         name: "Jenny M. DİVLELİ",
@@ -40,6 +45,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 6,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/kemal-yuksek.jpg?v=6',
         title: "Yeni Sivil Havacılık Modeli",
         name: "Prof. Dr. Kemal YÜKSEK",
@@ -48,6 +54,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 7,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/mahmut-muhiddin-keskin.jpg?v=6',
         title: "Cumhurbaşkanlığı Yatırım Ofisi Faaliyetleri",
         name: "Mahmut Muhiddin KESKİN",
@@ -56,6 +63,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 8,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/nihat-selim-ozge-oniz.jpg?v=6',
         title: "Otokoç Otomotivde Kariyer Olanakları",
         name: "Nihat Selim Birleşik ve Özge ÖNİZ",
@@ -64,6 +72,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 9,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/serdar-kizil1.jpg?v=6',
         title: "Sağlık Bakanlığı Personel İstihdamı ve Kariyer İmkanları",
         name: "Serdar KIZIL",
@@ -72,6 +81,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 10,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ugur-karaboga.jpg?v=6',
         title: "İş Arama Süreçlerinde Değişim ve Yapay Zeka",
         name: "Uğur KARABOĞA",
@@ -80,6 +90,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 11,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/volkan-mutlu-coskun.jpg?v=6',
         title: "Meteoroloji Alanında Kariyer",
         name: "Volkan Mutlu ÇOŞKUN",
@@ -88,6 +99,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 12,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/mehmet-teyfik-nane.jpg?v=6',
         title: "Havayolu İşletmeciliğinde Liderlik",
         name: "Mehmet Tevfik NANE",
@@ -96,6 +108,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 13,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/hayati-akbas.jpg?v=6',
         title: "Sağlık Sektöründe Kariyer ve Girişimlik",
         name: "Prof. Dr. Hayati AKBAŞ",
@@ -104,6 +117,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 14,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/umit-dedezade.jpg?v=6',
         title: "Küçük Bir Evin Mutfağında Başlayan Başarı Hikayesi",
         name: "Ümit DEDEZADE",
@@ -112,6 +126,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 15,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/oguz-dokur.jpg?v=6',
         title: "İnsan Kaynaklarının Fonksiyonları ve Kariyer Yolculuğu",
         name: "Oğuz DOKUR",
@@ -120,6 +135,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 16,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/abdulkerim-cay.jpg?v=6',
         title: "Türk Hava Yollarında İnsan Kaynakları Yönetimi ve İstihdam Süreci",
         name: "Abdulkerim ÇAY",
@@ -128,6 +144,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 17,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ahmet-akca1.jpg?v=6',
         title: "Geleceğin İnşasında Eğitim ve Gençlik",
         name: "Ahmet AKÇA",
@@ -136,6 +153,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 18,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ahmet-faruk-aysen.jpg?v=6',
         title: "Paranın Yeniden İcadı: Dijital Paralar",
         name: "Prof. Dr. Ahmet Faruk AYSAN",
@@ -144,6 +162,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 19,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ali-dost.jpg?v=6',
         title: "Hızla Değişen Dünyada Girişimcilik",
         name: "Ali DOST",
@@ -152,6 +171,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 20,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/busra-gok-irem-yagci.jpg?v=6',
         title: "BTK Akademi",
         name: "Büşra GÖK ve İrem YAĞCI",
@@ -160,6 +180,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 21,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/cemalettin-komurcu.jpg?v=6',
         title: "Yarınların İnşasında Kaynakların Verimli Kullanımı",
         name: "Cemalettin Kömürcü",
@@ -168,6 +189,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 22,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/davut-hanbay.jpg?v=6',
         title: "Yapay Zekanın Geleceği ve Yaşama Etkisi",
         name: "Prof. Dr. Davut HANBAY",
@@ -176,6 +198,7 @@ const speakersdata = [
         hall: "Samsun Salonu"
     },
     {
+        id: 23,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ilyas-likoglu1.jpg?v=6',
         title: "Mülakat Deneyimleri",
         name: "İlyas Likoğlu",
@@ -184,6 +207,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 24,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ismail-hakki-genc.jpg?v=6',
         title: "Samsun'dan Teksas ve Dubai'ye Uzanan Ekonomi ve Kariyer Yolculuğu",
         name: "Prof. Dr. İsmail Hakkı GENÇ",
@@ -192,6 +216,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 25,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/koray-sevindi.jpg?v=6',
         title: "Animasyon Eğitimi",
         name: "Doç. Dr. Koray SEVİNDİ",
@@ -200,6 +225,7 @@ const speakersdata = [
         hall: "Samsun Salonu"
     },
     {
+        id: 26,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/muhiddin-sahin1.jpg?v=6',
         title: "Kariyer Fırsatları ve Kamu İktisadi Teşebbüsü",
         name: "Muhiddin ŞAHİN",
@@ -208,6 +234,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 27,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/muhammet-saymaz.jpg?v=6',
         title: "Milli Teknoloji Hamlesi Yolculuğunda T3 Vakfı ve Teknofest",
         name: "Muhammet SAYMAZ",
@@ -216,6 +243,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 28,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/murat-siviloglu.jpg?v=6',
         title: "Yapay zeka Çağında Tarihçiliğin Geleceği",
         name: "Murat ŞİVİLOĞLU",
@@ -224,6 +252,7 @@ const speakersdata = [
         hall: "Samsun Salonu"
     },
     {
+        id: 29,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/mustafa-yagli.jpg?v=6',
         title: "Girişimcilik Üretim Yatırım",
         name: "Mustafa YAĞLI",
@@ -232,6 +261,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 30,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/pinar-gundor-sonmez.jpg?v=6',
         title: "Eğitim ve Kariyer Yolculuğu",
         name: "Pınar GÜNGÖR SÖNMEZ",
@@ -240,6 +270,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 31,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/selen-alkim.jpg?v=6',
         title: "Otomotiv Sektörü Nereye Gidiyor",
         name: "Selen ALKIM",
@@ -248,6 +279,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 32,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/serkan-karabacak.jpg?v=6',
         title: "Sermaye Piyasalarında Lisanslama Sınavları",
         name: "Serkan KARABACAK",
@@ -256,6 +288,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 33,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/alptuh-ahmet-guney.jpg?v=6',
         title: "Almanyada Türk Tarihi Çalışmaları",
         name: "Alptuğ Ahmet GÜNEY",
@@ -264,6 +297,7 @@ const speakersdata = [
         hall: "Samsun Salonu"
     },
     {
+        id: 34,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/aydin-zaim.jpg?v=6',
         title: "Türksat Uyduları ve Kariyer Fırsatları",
         name: "Aydın ZAİM",
@@ -272,6 +306,7 @@ const speakersdata = [
         hall: "Samsun Salonu"
     },
     {
+        id: 35,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/cemre-cinar.jpg?v=6',
         title: "Kariyer Yolculuğuna Başlarken",
         name: "Cemre ÇINAR",
@@ -280,6 +315,7 @@ const speakersdata = [
         hall: "19 Mayıs Salonu"
     },
     {
+        id: 36,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/emine-yurdusay.jpg?v=6',
         title: "Samsun Üniversitesinden Baykar'a Kariyer Yolculuğu",
         name: "Emine YURDUSAY",
@@ -288,6 +324,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 37,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ismet-akcay.jpg?v=6',
         title: "Sporun Kişisel Gelişim ve Toplumsal Gelişimdeki Yeri",
         name: "Opt. Dr. İsmet AKÇAY",
@@ -296,6 +333,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 38,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/murat-mustafa-gencey.jpg?v=6',
         title: "Dijital Dönüşüm Ekosistemi Türkiye Örneği",
         name: "Murat Mustafa GENCEL",
@@ -304,6 +342,7 @@ const speakersdata = [
         hall: "Karadeniz Salonu"
     },
     {
+        id: 39,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/nebahat-demir.jpg?v=6',
         title: "ARGE Merkezi Yolculuğumuz",
         name: "Nebahat Demir",
@@ -312,6 +351,7 @@ const speakersdata = [
         hall: "Bandırma Salonu"
     },
     {
+        id: 40,
         src: 'https://okaf.samsun.edu.tr/assets/konusmacilar/ramazan-terzi.jpg?v=6',
         title: "Dijital Genç Yapay Zeka Ekosistemi ile Geleceğimizi Şekillendiriyoruz",
         name: "Dr. Ramazan TERZİ",

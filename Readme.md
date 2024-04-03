@@ -58,3 +58,14 @@
 - FlatList Horizontal Mode
 - FlatList Multiple Column Support
 - @expo-vector-icons
+
+## Hafta 07
+- React Native Nagivation
+- Moving between Screens
+- Passing parameters to routes
+- Configuring headers
+- Drawer Navigation
+- Bottoms Tabs Navigation
+
+## Hafta 08
+- Bayram tatili
