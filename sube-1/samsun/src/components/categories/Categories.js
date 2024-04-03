@@ -1,36 +1,29 @@
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import React from "react";
 import CategoryHeader from "./CategoryHeader";
 import categories from "./categoryData";
 import CategoryIcon from "./CategoryIcon";
-
 const Categories = () => {
-  const renderItem = ({ item }) => {
-    return (
-      <View>
-        <CategoryIcon name={item?.categoryName} icon={item?.icon} />
-      </View>
-    );
-  };
+  const renderItem = ({ item }) => (
+    <View>
+      <CategoryIcon icon={item?.icon} name={item?.categoryName} />
+    </View>
+  );
 
   return (
     <View>
       <CategoryHeader name="Kategoriler" />
-      <View style={styles.listContainer} >
-        <FlatList 
-            numColumns={3} 
-            data={categories} 
-            renderItem={renderItem} />
-      </View>
+     
+        <FlatList
+            horizontal={false}
+            numColumns={3}
+            keyExtractor={(item) => item.categoryId}
+            renderItem={renderItem}
+            data={categories}
+        />
+      
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  listContainer:{
-    paddingHorizontal:9,
-    
-  }
-})
 
 export default Categories;
