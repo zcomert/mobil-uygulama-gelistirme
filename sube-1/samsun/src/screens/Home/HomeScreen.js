@@ -9,7 +9,7 @@ const HomeScreen = () => {
         <View>
             {/* <Header /> */}
             <Categories />
-            {/* <Events /> */}
+            <Events />
         </View>
     )
 }
