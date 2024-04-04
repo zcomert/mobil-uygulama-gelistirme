@@ -1,11 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import Header from '../../components/header/Header'
+import Categories from '../../components/categories/Categories'
+import Events from '../../components/events/Events'
 
-const HomeScreen = () =>
-{
+const HomeScreen = () => {
     return (
         <View>
-            <Text>HomeScreen</Text>
+            {/* <Header /> */}
+            <Categories />
+            {/* <Events /> */}
         </View>
     )
 }
