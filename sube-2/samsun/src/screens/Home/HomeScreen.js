@@ -1,12 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import Categories from '../../components/categories/Categories'
+import Events from '../../components/events/Events'
 
-const HomeScreen = () =>
-{
+const HomeScreen = ({ navigation }) => {
     return (
         <View>
-           <Categories />
+            <Categories />
+            <Events navigation={navigation} />
         </View>
     )
 }
