@@ -15,7 +15,8 @@ import SpeakerScreen from './src/screens/Speaker/SpeakerScreen'
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function App()
+{
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -29,15 +30,40 @@ export default function App() {
         />
         <Stack.Screen
           name="CampusScreen"
-          component={CampusScreen} />
-        
+          component={CampusScreen}
+          options={{
+            title: "Yerleşkeler"
+          }}
+        />
+
         <Stack.Screen
           name="AcademicScreen"
-          component={AcademicScreen} />
-        
-        <Stack.Screen name="AdministrativeScreen" component={AdministrativeScreen} />
-        <Stack.Screen name="StudentScreen" component={StudentsScreen} />
-        <Stack.Screen name="SpeakerScreen" component={SpeakerScreen} />
+          component={AcademicScreen}
+          options={{
+            title: "Akademik"
+          }}
+        />
+
+        <Stack.Screen
+          name="AdministrativeScreen"
+          component={AdministrativeScreen}
+          options={{
+            title: "İdari"
+          }}
+        />
+        <Stack.Screen name="StudentScreen"
+          component={StudentsScreen}
+          options={{
+            title: "Öğrenciler"
+          }}
+        />
+        <Stack.Screen
+          name="SpeakerScreen"
+          component={SpeakerScreen}
+          options={{
+            title: "Konuşmacı"
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
