@@ -2,10 +2,23 @@ import { View, Text, StyleSheet } from "react-native";
 import React, { useLayoutEffect } from "react";
 import MapView from "react-native-maps";
 import { INITAL_REGION } from "./locations";
+import { TouchableOpacity } from "react-native";
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const CampusScreen = ({navigation}) => {
 
-    useLayoutEffect(() => {});
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerRight:() => (
+            <TouchableOpacity>
+                <FontAwesome5 
+                    name="map-marker-alt" 
+                    size={24} 
+                    color="black" />
+            </TouchableOpacity>
+            )
+        })
+    });
 
   const { container, map } = styles;
   return (
