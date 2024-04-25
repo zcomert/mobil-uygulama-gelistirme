@@ -7,7 +7,7 @@ import Events from '../../components/events/Events'
 const HomeScreen = () => {
     return (
         <View>
-            {/* <Header /> */}
+            <Header />
             <Categories />
             <Events />
         </View>
