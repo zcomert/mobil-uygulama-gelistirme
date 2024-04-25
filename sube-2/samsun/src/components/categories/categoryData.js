@@ -36,6 +36,6 @@ export default categories = [
         categoryId: 6,
         categoryName: "Öğrenciler",
         icon: 'user-friends',
-        component: 'CampusScreen'
+        component: 'StudentTabGroup'
     },
 ]
