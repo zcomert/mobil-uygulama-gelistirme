@@ -4,7 +4,8 @@ import Categories from '../../components/categories/Categories'
 import Events from '../../components/events/Events'
 import Header from '../../components/header/Header'
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation }) =>
+{
     return (
         <View>
             <Header />

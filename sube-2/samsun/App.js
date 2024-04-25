@@ -16,10 +16,60 @@ import Navigation from './src/components/navigation/Navigation';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function App()
+{
   return (
     <NavigationContainer>
+<<<<<<< HEAD
       <Navigation />
+=======
+      <Stack.Navigator>
+        <Stack.Screen name="HomeScreen"
+          component={HomeScreen}
+          options={{
+            title: 'Ana Sayfa',
+            headerShown: false
+          }}
+
+        />
+        <Stack.Screen
+          name="CampusScreen"
+          component={CampusScreen}
+          options={{
+            title: "Yerleşkeler"
+          }}
+        />
+
+        <Stack.Screen
+          name="AcademicScreen"
+          component={AcademicScreen}
+          options={{
+            title: "Akademik"
+          }}
+        />
+
+        <Stack.Screen
+          name="AdministrativeScreen"
+          component={AdministrativeScreen}
+          options={{
+            title: "İdari"
+          }}
+        />
+        <Stack.Screen name="StudentScreen"
+          component={StudentsScreen}
+          options={{
+            title: "Öğrenciler"
+          }}
+        />
+        <Stack.Screen
+          name="SpeakerScreen"
+          component={SpeakerScreen}
+          options={{
+            title: "Konuşmacı"
+          }}
+        />
+      </Stack.Navigator>
+>>>>>>> a99becec0ef953af3a66b41937af75fd2d052e6d
     </NavigationContainer>
   );
 }
