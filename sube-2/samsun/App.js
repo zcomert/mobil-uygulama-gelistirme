@@ -20,9 +20,6 @@ export default function App()
 {
   return (
     <NavigationContainer>
-<<<<<<< HEAD
-      <Navigation />
-=======
       <Stack.Navigator>
         <Stack.Screen name="HomeScreen"
           component={HomeScreen}
@@ -69,7 +66,6 @@ export default function App()
           }}
         />
       </Stack.Navigator>
->>>>>>> a99becec0ef953af3a66b41937af75fd2d052e6d
     </NavigationContainer>
   );
 }
