@@ -69,3 +69,25 @@
 
 ## Hafta 08
 - Bayram tatili
+
+## Hafta 09 
+- Vizeler
+
+## Hafta 10
+- react-native-maps
+- MapView
+    - provider
+    - inital region
+    - showUserLocation
+    - showsMyLocation
+    - ref
+- useRef Hook
+- mapRef.current.animateToRegion()
+- mapRef.current.animateCamera({center, zoom}, {duration})
+- onRegionChange
+- onRegionChangeComplete
+- MapMarker
+    - key
+    - coordinate
+    - onMarkerSelected
+- MapCallout
