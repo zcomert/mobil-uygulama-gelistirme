@@ -14,10 +14,12 @@ import StudentsScreen from "./src/screens/Student/StudentsScreen";
 import SpeakerScreen from "./src/screens/Speaker/SpeakerScreen";
 import Navigation from "./src/components/navigation/Navigation";
 import { AppProvider } from "./src/context/AppContext";
+import FavoriteSpeaker from "./src/screens/Speaker/FavoriteSpeaker";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function App()
+{
   return (
     <AppProvider>
       <NavigationContainer>
@@ -65,6 +67,14 @@ export default function App() {
             component={SpeakerScreen}
             options={{
               title: "Konuşmacı",
+            }}
+          />
+
+          <Stack.Screen
+            name="FavoriteSpeaker"
+            component={FavoriteSpeaker}
+            options={{
+              title: "Favori Konuşmacılar",
             }}
           />
         </Stack.Navigator>

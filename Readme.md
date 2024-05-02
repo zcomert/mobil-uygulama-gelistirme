@@ -91,3 +91,9 @@
     - coordinate
     - onMarkerSelected
 - MapCallout
+
+## Hafta 11
+- Context API
+- Designing of a context
+- Managing app-wide state with context
+- Using the Created Context with useContext

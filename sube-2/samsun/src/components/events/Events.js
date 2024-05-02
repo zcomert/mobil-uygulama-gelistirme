@@ -3,11 +3,12 @@ import React from "react";
 import CategoryHeader from "../categories/CategoryHeader";
 import speakersdata from "./eventdata";
 
-const Events = ({ navigation }) => {
+const Events = ({ navigation }) =>
+{
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <TouchableOpacity
-        onPress={() => navigation.navigate("SpeakerScreen",{id:item.id})}
+        onPress={() => navigation.navigate("SpeakerScreen", { id: item.id })}
       >
         <Image style={styles.cover} source={{ uri: item?.src }} />
       </TouchableOpacity>
@@ -15,7 +16,7 @@ const Events = ({ navigation }) => {
   );
   return (
     <View>
-      <CategoryHeader name="Konuşmacılar" />
+      <CategoryHeader name="Konuşmacılar" press="FavoriteSpeaker" />
       <FlatList
         horizontal
         renderItem={renderItem}
