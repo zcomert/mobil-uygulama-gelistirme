@@ -1,11 +1,38 @@
 import { View, Text, StyleSheet, Image } from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useContext, useLayoutEffect } from "react";
 import speakersdata from "../../components/events/eventdata";
+import { TouchableOpacity } from "react-native";
+import { MaterialIcons } from '@expo/vector-icons';
+import AppContext from "../../context/AppContext";
 
 const SpeakerScreen = ({ navigation, route }) => {
+
+    const {ids, addFav, removeFav} = useContext(AppContext);
+    const id = route.params.id;
+    const isFav = ids.includes(id);
+    console.log(isFav)
+    // console.log(id)
+
+    const handlePress = (id) => {
+        if(isFav){
+            removeFav(id);
+        }
+        else{
+            addFav(id)
+        }
+        // console.log(ids)
+    }
+
   useLayoutEffect(() => {
     navigation.setOptions({
-        headerRight : () => (<Text>hey</Text>)
+        headerRight : () => (
+        <TouchableOpacity onPress={() => handlePress(id)} >
+            <MaterialIcons 
+                name={isFav ? "favorite" : "favorite-border"} 
+                size={24} 
+                color={isFav ? "red" :"black"} />
+        </TouchableOpacity>
+        )
     });
   });
 
