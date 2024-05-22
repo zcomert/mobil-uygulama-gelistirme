@@ -4,14 +4,12 @@ import CategoryHeader from "./CategoryHeader";
 import categories from "./categoryData";
 import CategoryIcon from "./CategoryIcon";
 import { useNavigation } from "@react-navigation/native";
-
-
 const Categories = () => {
-
   const navigation = useNavigation();
+  
   const handlePress = (component) => {
-    // console.log("Handle press", component)
-    navigation.navigate(component);
+    navigation.navigate(component)
+    // console.log("handle press")
   }
 
   const renderItem = ({ item }) => (

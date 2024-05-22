@@ -2,18 +2,13 @@ import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity } from "react
 import React from "react";
 import CategoryHeader from "../categories/CategoryHeader";
 import speakersdata from "./eventdata";
-import { useNavigation } from "@react-navigation/native";
 
-const Events = () => {
-
-  const navigation = useNavigation();
-
-
-
+const Events = ({ navigation }) =>
+{
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <TouchableOpacity
-        onPress={() => navigation.navigate("SpeakerScreen",{id:item.id})}
+        onPress={() => navigation.navigate("SpeakerScreen", { id: item.id })}
       >
         <Image style={styles.cover} source={{ uri: item?.src }} />
       </TouchableOpacity>
@@ -21,7 +16,7 @@ const Events = () => {
   );
   return (
     <View>
-      <CategoryHeader name="Konuşmacılar" />
+      <CategoryHeader name="Konuşmacılar" press="FavoriteSpeaker" />
       <FlatList
         horizontal
         renderItem={renderItem}

@@ -24,18 +24,18 @@ export default categories = [
         categoryId: 4,
         categoryName: "Araştırma Geliştirme",
         icon: 'atom',
-        component: 'CampusScreen'
+        component: 'HomeScreen'
     },
     {
         categoryId: 5,
         categoryName: "Lisanüstü Eğitim",
         icon: 'graduation-cap',
-        component: 'CampusScreen'
+        component: 'HomeScreen'
     },
     {
         categoryId: 6,
         categoryName: "Öğrenciler",
         icon: 'user-friends',
-        component: 'CampusScreen'
+        component: 'StudentScreen'
     },
 ]

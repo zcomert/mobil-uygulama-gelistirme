@@ -1,0 +1,6 @@
+{
+    "accessibility.signals.sounds.volume": 0,
+    "accessibility.signals.clear": {
+        "sound": "off"
+    }
+}
