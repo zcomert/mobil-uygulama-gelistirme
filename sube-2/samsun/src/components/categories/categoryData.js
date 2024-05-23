@@ -34,8 +34,8 @@ export default categories = [
     },
     {
         categoryId: 6,
-        categoryName: "Öğrenciler",
-        icon: 'user-friends',
-        component: 'StudentScreen'
+        categoryName: "Haber",
+        icon: 'newspaper',
+        component: 'NewsScreen'
     },
 ]
