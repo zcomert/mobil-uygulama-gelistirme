@@ -97,3 +97,11 @@
 - Designing of a context
 - Managing app-wide state with context
 - Using the Created Context with useContext
+
+## Hafta 12
+- Uygulama kontrol haftası
+
+## Hafta 13
+- Working with Services
+- fetch and axios
+- GET, POST, PUT, DELETE verbs in REST
