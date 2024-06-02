@@ -1,10 +1,13 @@
 import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import CategoryHeader from "../categories/CategoryHeader";
-import speakersdata from "./eventdata";
+import AppContext from "../../context/AppContext";
+
 
 const Events = ({ navigation }) =>
 {
+  const { speakersdata } = useContext(AppContext);
+
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <TouchableOpacity

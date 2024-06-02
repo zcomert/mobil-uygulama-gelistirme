@@ -16,10 +16,12 @@ import Navigation from "./src/components/navigation/Navigation";
 import { AppProvider } from "./src/context/AppContext";
 import FavoriteSpeaker from "./src/screens/Speaker/FavoriteSpeaker";
 import NewsScreen from "./src/screens/News/NewsScreen";
+import SearchResult from "./src/screens/News/SearchResult";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function App()
+{
   return (
     <AppProvider>
       <NavigationContainer>
@@ -82,6 +84,14 @@ export default function App() {
             component={NewsScreen}
             options={{
               title: "Haberler",
+            }}
+          />
+
+          <Stack.Screen
+            name="SearchResult"
+            component={SearchResult}
+            options={{
+              title: "Filtrelenmiş Haberler",
             }}
           />
         </Stack.Navigator>

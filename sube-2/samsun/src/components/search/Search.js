@@ -1,11 +1,23 @@
-import { View, Text, StyleSheet, TextInput, Image } from 'react-native'
-import React from 'react'
-import Colors from '../../constants/colors'
+import { View, Text, StyleSheet, TextInput } from 'react-native';
+import React, { useContext, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import Colors from '../../constants/colors';
 import { Zocial } from '@expo/vector-icons';
-
+import AppContext from '../../context/AppContext';
 
 const Search = () =>
 {
+    const { searchArticles, selectedArticles } = useContext(AppContext);
+    const [searchKey, setSearchKey] = useState('');
+    const navigation = useNavigation();
+
+    const handleSearch = () =>
+    {
+        searchArticles(searchKey);
+        console.log(selectedArticles)
+        navigation.navigate('SearchResult');
+    };
+
     return (
         <View style={styles.searchContainer}>
             <View style={styles.col1}>
@@ -15,12 +27,17 @@ const Search = () =>
                 <View style={styles.searchInputContainer}>
                     <TextInput
                         placeholder='Aranacak ifadeyi giriniz.'
+                        value={searchKey}
+                        onChangeText={setSearchKey}
+                        onSubmitEditing={handleSearch}
+                        returnKeyType="search"
                     />
                 </View>
             </View>
         </View>
-    )
-}
+    );
+};
+
 const styles = StyleSheet.create({
     searchContainer: {
         padding: 16,
@@ -42,5 +59,6 @@ const styles = StyleSheet.create({
     logo: {
 
     }
-})
-export default Search
+});
+
+export default Search;
