@@ -1,7 +1,8 @@
 import { View, FlatList, StyleSheet } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import NewsService from '../../services/NewsService';
 import FlatItem from './FlatItem'; // FlatItem bileşenini import ediyoruz
+import AppContext from '../../context/AppContext';
 
 const NewsScreen = () =>
 {
@@ -10,19 +11,8 @@ const NewsScreen = () =>
         return <FlatItem title={item?.title} publishedAt={item?.publishedAt} />;
     };
 
-    const [articles, setArticles] = useState([]);
+    const { articles } = useContext(AppContext);
 
-    useEffect(() =>
-    {
-        const newsService = new NewsService();
-        newsService
-            .getNews()
-            .then(resp =>
-            {
-                setArticles(resp.articles);
-                console.log(resp.status);
-            });
-    }, []);
 
     return (
         <View style={styles.container}>
